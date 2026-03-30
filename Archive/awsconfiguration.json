@@ -1,0 +1,75 @@
+{
+    "UserAgent": "aws-amplify/cli",
+    "Version": "0.1.0",
+    "IdentityManager": {
+        "Default": {}
+    },
+    "CredentialsProvider": {
+        "CognitoIdentity": {
+            "Default": {
+                "PoolId": "us-west-2:4e8469e5-5b11-4e73-b083-852a539a819f",
+                "Region": "us-west-2"
+            }
+        }
+    },
+    "CognitoUserPool": {
+        "Default": {
+            "PoolId": "us-west-2_cPefEuh61",
+            "AppClientId": "74t1hhamohhv5rgnnmcjtjecff",
+            "Region": "us-west-2"
+        }
+    },
+    "Auth": {
+        "Default": {
+            "OAuth": {
+                "WebDomain": "madeyuai.auth.us-west-2.amazoncognito.com",
+                "AppClientId": "74t1hhamohhv5rgnnmcjtjecff",
+                "SignInRedirectURI": "myapp://",
+                "SignOutRedirectURI": "myapp://",
+                "Scopes": [
+                    "aws.cognito.signin.user.admin",
+                    "email",
+                    "openid",
+                    "phone",
+                    "profile"
+                ]
+            },
+            "authenticationFlowType": "USER_SRP_AUTH",
+            "socialProviders": [],
+            "usernameAttributes": [
+                "EMAIL"
+            ],
+            "signupAttributes": [
+                "EMAIL"
+            ],
+            "passwordProtectionSettings": {
+                "passwordPolicyMinLength": 8,
+                "passwordPolicyCharacters": [
+                    "REQUIRES_LOWERCASE",
+                    "REQUIRES_UPPERCASE",
+                    "REQUIRES_NUMBERS",
+                    "REQUIRES_SYMBOLS"
+                ]
+            },
+            "mfaConfiguration": "OFF",
+            "mfaTypes": [],
+            "verificationMechanisms": [
+                "EMAIL"
+            ]
+        }
+    },
+    "AppSync": {
+        "Default": {
+            "ApiUrl": "https://qawtkog3vrh2bdsv2orphaprlu.appsync-api.us-west-2.amazonaws.com/graphql",
+            "Region": "us-west-2",
+            "AuthMode": "AWS_IAM",
+            "ClientDatabasePrefix": "MadeYuAppAPI_AWS_IAM"
+        },
+        "GenerativeImageAPI_AMAZON_COGNITO_USER_POOLS": {
+            "ApiUrl": "https://qawtkog3vrh2bdsv2orphaprlu.appsync-api.us-west-2.amazonaws.com/graphql",
+            "Region": "us-west-2",
+            "AuthMode": "AMAZON_COGNITO_USER_POOLS",
+            "ClientDatabasePrefix": "MadeYuAppAPI_AMAZON_COGNITO_USER_POOLS"
+        }
+    }
+}
